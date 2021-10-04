@@ -40,42 +40,59 @@
 		<form method="POST" id="form">
 
 			<!-- od użytkownika pobieramy imię, nazwisko, email oraz informację, do jakiej sekcji chce dołączyć -->
+
+			<!-- Name -->
 			<div class="form__group">
 				<label for="first-name">Imię</label>
-		    	<input type="text" id="first-name"/>
+		    	<input type="text" id="first-name" name="name" required minlength="3" maxlength="100"/>
 			</div>
 			
+			<!-- Surname -->
 			<div class="form__group">
 				<label for="last-name">Nazwisko</label>
-				<input type="text" id="last-name"/>
+				<input type="text" id="last-name" name="surname" required minlength="3" maxlength="100"/>
 			</div>
 
+			<!-- Email -->
 			<div class="form__group">
 				<label for="email">Email</label>
-				<input type="email" id="email"/>
+				<input type="email" id="email" name="email" required placeholder="email@address.com"/>
 			</div>
 
-			<span>Sekcja</span>
+			<!-- Password -->
+            <div class="form__group">
+                <label for="password1">Password</label>
+                <input type="password" id="password1" placeholder="Create Password (Min. 8 characters)"
+                    required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Please include at least 1 lowercase character, 1 uppercase character and 1 number" >
+            </div>
+            <!-- Confirm password -->
+            <div class="form__group">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" placeholder="Confirm Password"
+                    required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" name="password">
+            </div>
+
+			<!-- Checkboxes -->
 			<div class="checkbox__group">
 
 				<div class="form__group">
 					<label for="frontend-checkbox">Frontend</label>
-					<input type="checkbox" id="frontend-checkbox" name="section" value="frontend">
+					<input type="checkbox" id="frontend-checkbox" name="frontend" value="frontend">
 				</div>
 				
 				<div class="form__group">
 					<label for="backend-checkbox">Backend</label>
-					<input type="checkbox" id="backend-checkbox" name="section" value="frontend">
+					<input type="checkbox" id="backend-checkbox" name="backend" value="backend">
 				</div>
 				
 				<div class="form__group">
 					<label for="mobile-checkbox">Mobile</label>
-					<input type="checkbox" id="mobile-checkbox" name="section" value="frontend">
+					<input type="checkbox" id="mobile-checkbox" name="mobile" value="mobile">
 				</div>
 				
 				<div class="form__group">
 					<label for="graphics-checkbox">Grafika</label>
-					<input type="checkbox" id="graphics-checkbox" name="section" value="frontend">
+					<input type="checkbox" id="graphics-checkbox" name="graphics" value="graphics">
 				</div>
 			</div>
             <!-- <input type="submit" value="Prześlij"> -->
