@@ -15,7 +15,9 @@
 <html>
 <head>
 	<title>AKAI Frontend Task</title>
-	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/form.css"> -->
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/styles.css">
 	<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 </head>
 <body>
@@ -65,6 +67,7 @@
                 <input type="password" id="password1" placeholder="Create Password (Min. 8 characters)"
                     required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Please include at least 1 lowercase character, 1 uppercase character and 1 number" >
             </div>
+
             <!-- Confirm password -->
             <div class="form__group">
                 <label for="password2">Confirm Password</label>
@@ -110,6 +113,9 @@
         ...
     -->
 
+		<footer class="footer" id="footer">
+			&copy Kacper Nadstoga Politechnika Poznańska 2021
+		</footer>
 
 <!-- zaimportowanie pliku z kodem javascript, który dokona walidacji danych (zadanie JS) -->
 <script type="text/javascript" src="js/validation.js"></script>
