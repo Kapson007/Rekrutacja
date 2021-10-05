@@ -6,3 +6,7 @@ W każdym z tych plików znajduje się instrukcja zawierająca informację na te
 Zacznij od pliku index.html, przeanalizuj go, a następnie przejrzyj plik .css i .js. </p>
 
 <h3>Powodzenia!</h3>
+
+##
+źródło grafik: workshop: https://pixabay.com/illustrations/people-group-office-digital-5579977/
+intergrated circuit: https://www.heropatterns.com
