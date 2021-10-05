@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap&weight=800');
 
 :root{
     --main-theme: #F9A11A;
@@ -31,7 +31,7 @@ body{
     bottom: 60%;
     height: 770px;
     width: 1050px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.774);
     background-image: url('../img/people-g5d48039c6_1920.png');
     /* z-index: -10; */
     /* opacity: .8; */
@@ -47,6 +47,7 @@ body{
     width: 100%;
     height: 100px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #fbfbfba2;
@@ -188,4 +189,13 @@ button:focus{
       40%, 60% {
         transform: translate3d(4px, 0, 0);
       }
+}
+
+#title{
+    margin: 50px;
+    outline: none;
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px #f9a01aaf;
 }
