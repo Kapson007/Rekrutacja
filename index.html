@@ -27,20 +27,13 @@
 
 	<!-- początek formularza -->
 	
-	<!-- element section ma ID "task-frontend". Może to się nam przydać m.in. podczas stylowania dokumentu -->
 	<section class="container" id="task-frontend">
-		<!-- element span otrzymuje klasę "basic-title". Klasa ta może być wykorzystywana w wielu różnych elementach -->
-		<!-- <span class="basic-title">Dołącz do nas!</span> -->
 
 		<h2 id="title">Dołącz do nas!</h3>
 
-		<!-- <hr class="form-line"></hr> -->
 
 		<form method="POST" id="form" novalidate >
 
-			<!-- od użytkownika pobieramy imię, nazwisko, email oraz informację, do jakiej sekcji chce dołączyć -->
-
-			<!-- Name -->
 			<div class="form__group">
 				<label class="label" for="first-name">Imię</label>
 		    	<input type="text" id="first-name" name="name" required pattern="[A-Z]{1,}[a-z]{2,}" title="Please include only 1 uppercase letter and only with Latin alphabet" minlength="3" maxlength="100" data-error="Nieprawidłowo wypełnione imię"/>
@@ -70,8 +63,8 @@
 			<!-- Password -->
             <div class="form__group">
                 <label class="label" for="password1">Hasło</label>
-                <input type="password" id="password1" placeholder="Create Password (Min. 8 characters)"
-                    required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Please include at least 1 lowercase character, 1 uppercase character and 1 number" >
+                <input type="password" id="password1" placeholder="Podaj hasło (minium 8 znaków)"
+                    required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Please include at least 1 lowercase character, 1 uppercase character and 1 number" data-error="Hasło musi zawierać co najmniej 1 duzą literę, 1 małą literę i 1 cyfrę" >
 					<i class="fas fa-check-circle"></i>
 					<i class="fas fa-times-circle"></i>
 					<small></small>
@@ -80,55 +73,46 @@
             <!-- Confirm password -->
             <div class="form__group">
                 <label class="label" for="password2">Potwierdź hasło</label>
-                <input type="password" id="password2" placeholder="Confirm Password"
-                    required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" name="password">
+                <input type="password" id="password2" placeholder="Potwierdź hasło"
+                    required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" name="password" data-error="Hasła muszą się zgadzać!">
 				<i class="fas fa-check-circle"></i>
 				<i class="fas fa-times-circle"></i>
 				<small></small>
             </div>
 			
 			<!-- Checkboxes -->
-			<div class="checkbox__group">
+			<div class="checkbox__group" data-error="Proszę wybrać przynajmniej jedną specjalizację">
 
 				<div class="form__group">
 					<label class="checkbox__label"  for="frontend-checkbox">Frontend</label>
-					<input type="checkbox" id="frontend-checkbox" name="frontend" value="frontend">
+					<input type="checkbox" id="frontend-checkbox" name="frontend" value="Frontend">
 				</div>
 				
 				<div class="form__group">
 					<label class="checkbox__label" for="backend-checkbox">Backend</label>
-					<input type="checkbox" id="backend-checkbox" name="backend" value="backend">
+					<input type="checkbox" id="backend-checkbox" name="backend" value="Backend">
 				</div>
 				
 				<div class="form__group">
 					<label class="checkbox__label" for="mobile-checkbox">Mobile</label>
-					<input type="checkbox" id="mobile-checkbox" name="mobile" value="mobile">
+					<input type="checkbox" id="mobile-checkbox" name="mobile" value="Mobile">
 				</div>
 				
 				<div class="form__group">
 					<label class="checkbox__label" for="graphics-checkbox">Grafika</label>
-					<input type="checkbox" id="graphics-checkbox" name="graphics" value="graphics">
+					<input type="checkbox" id="graphics-checkbox" name="graphics" value="Graphics">
 				</div>
+				<small id="checkboxInfo" ></small>
 			</div>
-            <!-- <input type="submit" value="Prześlij"> -->
-			<button type="submit">Prześlij</button>
+			<button id="submitButton" type="submit">Prześlij</button>
 		</form>
 
-		<!-- <hr class="form-line"></hr> -->
-		
 
 	</section>
 	<!-- koniec formularza -->
 
-    <!--
-        ...
-        ...
-        ...
-    -->
-
 		<footer class="footer" id="footer">
-			<h4>&copy Kacper Nadstoga Politechnika Poznańska 2021</h4>
-			
+			<h4>&copy Kacper Nadstoga Politechnika Poznańska 2021</h4>	
 		</footer>
 
 <!-- zaimportowanie pliku z kodem javascript, który dokona walidacji danych (zadanie JS) -->

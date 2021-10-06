@@ -132,7 +132,7 @@ body{
     font-size: .9rem;
 } */
 
-.form__group small{
+#checkboxInfo, .form__group small{
     visibility: hidden;
     position: absolute;
     top: 65px;
@@ -141,7 +141,7 @@ body{
     width: 90%;
 }
 
-.form__group.error small{
+#checkboxInfo.error, .form__group.error small{
     visibility: visible;
     color: var(--error);
     line-height: 15px;
@@ -192,9 +192,13 @@ body{
     top: -10px;
 }
 
+.checkError{
+    margin: 10px;
+}
+
 button{
     position: relative;
-    top: 10px;
+    top: 20px;
     cursor: pointer;
     color: #fff;
     /* background: rgba(0, 0, 0, 0.767); */
@@ -273,6 +277,9 @@ button:active{
     text-shadow: 2px 2px #f9a01aaf;
 }
 
-button{
+
+.registered{
     background-color: var(--success);
+    letter-spacing: 2px;
 }
+
