@@ -116,7 +116,7 @@ body{
     border-radius: 5px;
     border: 2px solid #000;
     box-sizing: border-box;
-    
+    font-size: 1.1rem;
     padding: 10px;
 
 }
@@ -135,14 +135,16 @@ body{
 .form__group small{
     visibility: hidden;
     position: absolute;
-    top: 70px;
+    top: 65px;
     left: 0;
-    font-size: .8rem;
+    font-size: .7rem;
+    width: 90%;
 }
 
 .form__group.error small{
     visibility: visible;
     color: var(--error);
+    line-height: 15px;
 }
 
 .form__group i{
@@ -213,12 +215,17 @@ button{
 button:hover{
     filter: brightness(200%);
     background-color: rgb(43, 43, 43);
+    
 }
 
 button:focus{
     outline: none;
+    
 }
 
+button:active{
+    transform: translateY(5px);
+}
 
 .message-container{
     position: relative;
@@ -264,4 +271,8 @@ button:focus{
     font-weight: 600;
     letter-spacing: 5px;
     text-shadow: 2px 2px #f9a01aaf;
+}
+
+button{
+    background-color: var(--success);
 }
