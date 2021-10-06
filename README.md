@@ -1,6 +1,6 @@
 <h3>AKAI - Zadanie Frontend</h3>
 
-#Zadanie rekrutacyjne
+<h1>Zadanie rekrutacyjne</h1>
 
 Projekt formularza i jego walidacji za pomocą pliku <code>validation.js</code>
 Logika stworzona w <code>VanillaJs</code>.
@@ -10,7 +10,7 @@ Wykorzystane ikony pochodzą z FontAwesome.
 Do uruchomienia projektu nie potrzeba instalować dodatkowych dependencji.
 Demo dostępne na: https://kapson007.github.io/Rekrutacja/
 
-##źródło grafik:
+<h2>Źródło grafik:</h2>
 <br/>
 workshop: https://pixabay.com/illustrations/people-group-office-digital-5579977/
 <br/>
