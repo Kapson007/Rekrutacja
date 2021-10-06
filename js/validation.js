@@ -9,8 +9,9 @@
     Powodzenia!
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
+// Kacper Nadstoga Politechnika Poznańska Teleinformatyka 
 
-
+// DOM elements
 const form = document.getElementById('form');
 const firstName = document.getElementById('first-name');
 const lastName = document.getElementById('last-name');
@@ -19,6 +20,8 @@ const password1 = document.getElementById('password1');
 const password2 = document.getElementById('password2');
 const inputs = [firstName, lastName, email];
 const checkBoxes = document.querySelectorAll('input[type="checkbox"]');
+
+// faculties which user chose
 const faculties = [];
 
 // flag to check all inputs 
@@ -26,6 +29,8 @@ let isFilled = false;
 let passwordsMatch = false;
 let checkBoxChoose = false;
 
+
+// main function to check whole inputs
 function processValidity(){
     checkValidity();
     checkPasswords();
@@ -33,6 +38,7 @@ function processValidity(){
 }
 
 function checkValidity(){
+
     inputs.forEach(toCheck => {
         if(toCheck.value === ''){
             setErrorMessage(toCheck);
@@ -46,11 +52,16 @@ function checkValidity(){
 }
 
 function checkPasswords(){
+
     if(password1.value === '' || password2.value === ''){
+
         setErrorMessage(password1, password1.dataset.error);
         setErrorMessage(password2, password2.dataset.error);
+
     }else if(password1.value !== password2.value){
+
         setErrorMessage(password2, password2.dataset.error);
+
     }else{
         setSuccess(password1);
         setSuccess(password2);
@@ -62,12 +73,15 @@ function checkBoxesValidity(){
 
     const checkGroup = document.querySelector('.checkbox__group');
     const message = checkGroup.querySelector('#checkboxInfo');
-
+    
+    // check all checkboxes
     checkBoxes.forEach( checkbox => {
         if(checkbox.checked){
+
             console.log(checkbox.value);
             faculties.push(checkbox.value);
             checkBoxChoose = true;
+
             if(message.classList.contains('error')){
                 message.classList.remove('error');
             }
@@ -75,6 +89,7 @@ function checkBoxesValidity(){
     });
 
     if(!checkBoxChoose){
+
         message.classList.add('error'); 
         message.textContent = `${checkGroup.dataset.error}`;
     }
@@ -109,14 +124,20 @@ function setSuccess(input){
 }
 
 function ifRegistered(flag){
+
     const submitBtn = document.querySelector('button');
     if(flag){
+
         if(submitBtn.classList.contains('faield')){
+
             submitBtn.classList.remove('failed');
         }
+
         submitBtn.textContent = 'Pomyślnie zarejestrowano!';
         submitBtn.classList.add('registered');
+
     }else{
+        
         if(submitBtn.classList.contains('registered')){
             submitBtn.classList.remove('registered');
         }
@@ -127,8 +148,7 @@ function ifRegistered(flag){
     }
 }
 
-
-
+// save user data as an object (without password)
 function saveData(){
     const userData = {
         firstName: firstName.value,
@@ -139,22 +159,27 @@ function saveData(){
     console.log(userData);
 }
 
-form.addEventListener('submit', e => {
+// run validation after content will load
+window.addEventListener('DOMContentLoaded', ()=>{
+    form.addEventListener('submit', e => {
 
-    e.preventDefault();
-
-    processValidity();
-
-    if(isFilled && passwordsMatch && checkBoxChoose){
-        saveData();
-        ifRegistered(true);
-        // send form if data are correct
-        // e.target.submit();
-    }else{
-        ifRegistered(false);
-        return false;
-    }
-
+        e.preventDefault();
+    
+        processValidity();
+    
+        // check all flags to confirm whole form
+        if(isFilled && passwordsMatch && checkBoxChoose){
+            saveData();
+            ifRegistered(true);
+            // send form if data are correct
+            // e.target.submit();
+        }else{
+            ifRegistered(false);
+            return false;
+        }
+    
+    });
 });
+
 
 
