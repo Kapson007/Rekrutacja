@@ -1,22 +1,17 @@
 <h3>AKAI - Zadanie Frontend</h3>
-<p>Upiększ ten formularz!<p>
-
-<p>Do dyspozycji masz trzy pliki odpowiedzialne za poszczególne etapy zadania: html, css i javascript.
-W każdym z tych plików znajduje się instrukcja zawierająca informację na temat tego, co należy wykonać.
-Zacznij od pliku index.html, przeanalizuj go, a następnie przejrzyj plik .css i .js. </p>
-
-<h3>Powodzenia!</h3>
-
-#Zadanie rekrutacyjne
+#
+Zadanie rekrutacyjne
 Projekt formularza i jego walidacji za pomocą pliku <code>validation.js</code>
-Logika stworzona w <code>VanillaJs</code>. 
-Skorzystano z FontAwesome.
+Logika stworzona w <code>VanillaJs</code>.
+Przed nadaniem desginu formularzowi, zresetowano style za pomocą pliku <code>css/reset.css</code>
+Wykorzystane ikony pochodzą z <h5>FontAwesome</h5>.
 
 Do uruchomienia projektu nie potrzeba instalować dodatkowych dependencji.
-Demo dostępne na: 
+Demo dostępne na: https://kapson007.github.io/Rekrutacja/
 
 ##
 źródło grafik:
 <br/>
 workshop: https://pixabay.com/illustrations/people-group-office-digital-5579977/
+<br/>
 intergrated circuit: https://www.heropatterns.com
