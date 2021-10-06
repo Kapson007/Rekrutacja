@@ -80,6 +80,12 @@ body{
     opacity: 1;
     background: transparent;
     color: black;
+    margin: 50px;
+    outline: none;
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px #f9a01aaf;
 }
 
 .form__group{
@@ -88,13 +94,7 @@ body{
     margin-bottom: 20px;
 }
 
-/* .label{
-    position: relative;
-    bottom: 3px;
-    padding: 5px;
-    font-size: 1.1rem;
-    /* margin-bottom: 100px; */
-/* }  */
+
 
 .from__group label{
     display: inline-block;
@@ -102,7 +102,6 @@ body{
     margin-left: 10px;
     padding: 10px;
 
-    /* position: relative; */
 }
 
 .form__group input{
@@ -120,17 +119,6 @@ body{
     padding: 10px;
 
 }
-
-/* input{
-    width: 90%;
-    height: 40px;
-    outline: none;
-    border-radius: 5px;
-    border: 2px solid #000;
-    box-sizing: border-box;
-    padding: 10px;
-    font-size: .9rem;
-} */
 
 #checkboxInfo, .form__group small{
     visibility: hidden;
@@ -214,17 +202,16 @@ button{
     /* padding: 10px; */
     margin-top: 5px;
     transition: all .1s;
+    
 }
 
 button:hover{
-    filter: brightness(200%);
-    background-color: rgb(43, 43, 43);
+    filter: brightness(110%);
     
 }
 
 button:focus{
     outline: none;
-    
 }
 
 button:active{
@@ -245,41 +232,34 @@ button:active{
     color: #000;
 }
 
-/* .error{
-    animation: error 0.82s cubic-bezier(.36,.07,.19,.97) both;
-} */
 
-
-@keyframes error {
-    10%, 90% {
-        transform: translate3d(-1px, 0, 0);
-      }
-      
-      20%, 80% {
-        transform: translate3d(2px, 0, 0);
-      }
+.failed{
+    background-color: var(--error);
+    letter-spacing: 2px;
+    animation: shake 1s 0s ease forwards;
     
-      30%, 50%, 70% {
-        transform: translate3d(-4px, 0, 0);
-      }
-    
-      40%, 60% {
-        transform: translate3d(4px, 0, 0);
-      }
 }
-
-#title{
-    margin: 50px;
-    outline: none;
-    font-size: 3.5rem;
-    font-weight: 600;
-    letter-spacing: 5px;
-    text-shadow: 2px 2px #f9a01aaf;
-}
-
 
 .registered{
     background-color: var(--success);
     letter-spacing: 2px;
 }
 
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }

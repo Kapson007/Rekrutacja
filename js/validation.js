@@ -59,7 +59,7 @@ function checkPasswords(){
 }
 
 function checkBoxesValidity(){
-    
+
     const checkGroup = document.querySelector('.checkbox__group');
     const message = checkGroup.querySelector('#checkboxInfo');
 
@@ -78,14 +78,16 @@ function checkBoxesValidity(){
         message.classList.add('error'); 
         message.textContent = `${checkGroup.dataset.error}`;
     }
-
 }
 
 function setErrorMessage(input, info="To pole nie moze być puste!"){
+
     const formGroup = input.parentElement;
     const message = formGroup.querySelector('small');
+
     console.log(input.dataset.error);
     message.textContent = `${info}`;
+
     if(formGroup.classList.contains('success')){
         formGroup.classList.remove('success');
     }
@@ -106,12 +108,35 @@ function setSuccess(input){
     formGroup.classList.add('success');
 }
 
-function registered(){
+function ifRegistered(flag){
     const submitBtn = document.querySelector('button');
+    if(flag){
+        if(submitBtn.classList.contains('faield')){
+            submitBtn.classList.remove('failed');
+        }
+        submitBtn.textContent = 'Pomyślnie zarejestrowano!';
+        submitBtn.classList.add('registered');
+    }else{
+        if(submitBtn.classList.contains('registered')){
+            submitBtn.classList.remove('registered');
+        }
 
-    submitBtn.textContent = 'Pomyślnie zarejestrowano!';
-    submitBtn.classList.add('registered');
+        submitBtn.textContent = 'Niepowodzenie!';
+        submitBtn.classList.add('failed');
 
+    }
+}
+
+
+
+function saveData(){
+    const userData = {
+        firstName: firstName.value,
+        lastName: lastName.value,
+        email: email.value,
+        faculty: faculties
+    }
+    console.log(userData);
 }
 
 form.addEventListener('submit', e => {
@@ -120,10 +145,14 @@ form.addEventListener('submit', e => {
 
     processValidity();
 
-    if(isFilled && passwordsMatch){
+    if(isFilled && passwordsMatch && checkBoxChoose){
         saveData();
-        registered();
-        e.target.submit();
+        ifRegistered(true);
+        // send form if data are correct
+        // e.target.submit();
+    }else{
+        ifRegistered(false);
+        return false;
     }
 
 });
