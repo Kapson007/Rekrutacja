@@ -7,6 +7,16 @@ Zacznij od pliku index.html, przeanalizuj go, a następnie przejrzyj plik .css i
 
 <h3>Powodzenia!</h3>
 
+#Zadanie rekrutacyjne
+Projekt formularza i jego walidacji za pomocą pliku <code>validation.js</code>
+Logika stworzona w <code>VanillaJs</code>. 
+Skorzystano z FontAwesome.
+
+Do uruchomienia projektu nie potrzeba instalować dodatkowych dependencji.
+Demo dostępne na: 
+
 ##
-źródło grafik: workshop: https://pixabay.com/illustrations/people-group-office-digital-5579977/
+źródło grafik:
+<br/>
+workshop: https://pixabay.com/illustrations/people-group-office-digital-5579977/
 intergrated circuit: https://www.heropatterns.com
