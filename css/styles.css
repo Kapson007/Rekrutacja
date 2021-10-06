@@ -31,8 +31,9 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    bottom: 60%;
-    height: 870px;
+    /* bottom: 60%; */
+    top: 50px;
+    height: 860px;
     width: 1050px;
     max-width: 100%;
     background-color: rgba(255, 255, 255, 0.774);
@@ -66,8 +67,6 @@ body{
     top: -30px;
     width: 45%;
     height: 75vh;
-    /* border: 2px solid red; */
-    /* z-index: 100; */
     background-color: #fff;
     border-radius: 5px;
 
@@ -94,14 +93,11 @@ body{
     margin-bottom: 20px;
 }
 
-
-
 .from__group label{
     display: inline-block;
     margin-bottom: 10px;
     margin-left: 10px;
     padding: 10px;
-
 }
 
 .form__group input{
@@ -182,6 +178,10 @@ body{
 
 .checkError{
     margin: 10px;
+}
+
+#checkboxInfo{
+    top: 70px;
 }
 
 button{
